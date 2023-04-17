@@ -14,14 +14,12 @@ async def handler(websocket):
                     "j": "a"
                 }
                 await websocket.send(json.dumps(resp))
-
             elif ws_json["j"] == "b":
                 print("Button " + str(ws_json["i"]) + ": " + str(ws_json["v"]))
                 resp = {
                     "j": "b"
                 }
                 await websocket.send(json.dumps(resp))
-
             elif ws_json["j"] == "t":
                 print("Hat " + str(ws_json["i"]) + ": " + str(ws_json["v"]))
                 resp = {

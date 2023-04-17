@@ -1,4 +1,4 @@
-const WSOCK_URL = "ws://ohuguenot-legion-5"
+const WSOCK_URL = "ws://localhost"
 const WSOCK_PORT = "8001"
 const wsock = new WebSocket(WSOCK_URL + ":" + WSOCK_PORT);
 
@@ -125,7 +125,7 @@ const pollGamepad = () => {
                 "highlight",
                 axe <= -0.5 || axe >= 0.5
             );
-            if (axe <= -0.5 || axe >= 0.5) {
+            if (axe <= -0.1 || axe >= 0.1) {
                 vibrate(gamepad);
                 json = {
                     "j": "a", // Joytick: <Button> / <Axis> / <Hat>
